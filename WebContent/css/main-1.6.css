@@ -523,7 +523,7 @@ section h2 {
     }
     .column {
         float: left;
-        width: 50%;
+        width: 100%;
     }
     .column p {
         font-size: 1.4em;
@@ -875,4 +875,12 @@ a.email {
 #cv{    
     border-bottom: 2px solid #000;  
     border-left: 2px solid #000;  
+}
+#zx-biao{
+	width: 80%;
+	float: left;
+}
+#zx-fen{
+	width: 15%;
+	float: right;
 }

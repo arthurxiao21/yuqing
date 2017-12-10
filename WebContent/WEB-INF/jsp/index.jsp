@@ -35,6 +35,8 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/vendor/jQuery.js"></script>
+<script type="text/javascript" src="js/vendor/jqplot.js"></script>
 
 
 <!-- 不规则新闻CSS -->
@@ -175,13 +177,14 @@
 
 				<section id="brideandgroom" class="clearfix">
 					<span class="head-sarah"
-						style="filter: shadow(color = #9370db); width: 100%; color: #ffebcd; line-height: 150%; font-family: 隶书"><h2>今日新闻</h2></span>
+						style="filter: shadow(color = #9370db); width: 100%; color: #ffebcd; line-height: 150%; font-family: 隶书"><font
+						size=150px>今日新闻</font></span>
 					<!-- 整齐的 样式-->
 					<div class="column left">
 						<font size="+1">
-							<ul>
+							<ul style="margin-left: 150px; margin-top: 30px">
 								<c:forEach var="news" items="${newsList}">
-								<li><a href="${news.URL } "target="blank">${news.title }</a></li>
+									<li><a href="${news.URL } " target="blank">${news.title }</a></li>
 								</c:forEach>
 							</ul>
 						</font>
@@ -190,14 +193,14 @@
 					<!--end column-->
 
 					<!-- 杂乱的 样式-->
-					<div class="column right">
+					<!-- <div class="column right">
 						<font size="+1">
 							<ul>
-								<!-- 新闻 -->
+								新闻
 							</ul>
 						</font>
 
-					</div>
+					</div> -->
 					<!--end column-->
 
 					<div class="clearfix"></div>
@@ -292,7 +295,7 @@
 
 				<section id="wedding" class="clearfix">
 
-					<h1>Wedding</h1>
+					<font size="30px">今日热度</font>
 
 					<div style="width: 100%; float: left">
 						<div id="wrapper">
@@ -305,40 +308,40 @@
 									<li id="iphone">
 										<div class="bottom">
 											<div class="infobox">
-												<h3>iPhone</h3>
-												<p>80,1</p>
+												<font size=20px>11.25</font>
+												<p>234</p>
 											</div>
 										</div>
 									</li>
 									<li id="macbook">
 										<div class="bottom">
 											<div class="infobox">
-												<h3>MacBook</h3>
-												<p>102,6</p>
+												<font size=20px>11.24</font>
+												<p>214</p>
 											</div>
 										</div>
 									</li>
 									<li id="ipod">
 										<div class="bottom">
 											<div class="infobox">
-												<h3>iPod</h3>
-												<p>198,4</p>
+												<font size=20px>11.23</font>
+												<p>423</p>
 											</div>
 										</div>
 									</li>
 									<li id="cinema">
 										<div class="bottom">
 											<div class="infobox">
-												<h3>Cinema&nbsp;Display</h3>
-												<p>38,2</p>
+												<font size=20px>11.22</font>
+												<p>132</p>
 											</div>
 										</div>
 									</li>
 									<li id="macmini">
 										<div class="bottom">
 											<div class="infobox">
-												<h3>Mac&nbsp;Mini</h3>
-												<p>55,6</p>
+												<font size=20px>11.21</font>
+												<p>432</p>
 											</div>
 										</div>
 									</li>
@@ -351,98 +354,161 @@
 					</div>
 					<!--end column-->
 
-
-					<h2>BRIDAL PARTY</h2>
-
 					<div class="column left bp">
 
-						<h2>Bridesmaids</h2>
-						<div class="column left">
-							<p>
-								Coming Soon!<br />
-							</p>
+
+						<div style="width: 70%; float: left; margin-left: 20px">
+							<font size="+1">
+								<ul>
+									<c:forEach var="news" items="${newsList}">
+										<li><a href="${news.URL } " target="blank">${news.title }</a></li>
+									</c:forEach>
+								</ul>
+							</font>
 						</div>
-						<div class="column right">
-							<p></p>
+						<div style="width: 20%; float: right">
+							<font size="+1">
+								<ul>
+									<c:forEach var="news" items="${newsList}">
+										<li>${news.num }</li>
+									</c:forEach>
+								</ul>
+							</font>
 						</div>
 
 					</div>
 					<!--end column-->
-					<div class="column right bp">
 
-						<h2>Groomsmen</h2>
-						<div class="column left">
-							<p>
-								Coming Soon!<br />
-							</p>
-						</div>
-						<div class="column right">
-							<p></p>
-						</div>
-
-					</div>
 					<!--end column-->
 				</section>
 
 				<section id="accomodations" class="clearfix">
 
-					<h1>Accomodations</h1>
-
-					<div class="column left">
-
-						<h2>HOTELS</h2>
-						<p>
-							(At the venue) <br /> The Inn at Rancho Santa Fe <br /> 5951
-							Linea Del Cielo <br /> Rancho Santa Fe, CA 92067 <br /> <a
-								href="tel:1-858-756-1131">(858) 756-1131</a> <br /> $279 <br />
-							- <br /> Morgan Run Resort &amp; Club (1.9 miles away) <br />
-							5690 Cancha De Golf <br /> Rancho Santa Fe, CA 92091 <br /> <a
-								href="tel:1-866-599-6674">(866) 599-6674</a> <br /> $90 <br />
-							- <br /> (Closer to the beach) <br /> Courtyard San Diego
-							Solana Beach/Del Mar (4.5 miles away) <br /> 717 S Hwy 101 <br />
-							Solana Beach, CA <br /> <a href="tel:1-858-792-8200">(858)
-								792-8200</a> <br /> $109 <br />
-						</p>
+					<font size="30px">今日舆情</font>
+					<div style="height: 50px"></div>
+					<div style="width: 50%; height: 450px; float: left;">
+						<div id="chart1"></div>
 					</div>
 					<!--end column-->
 
-					<div class="column right">
-						<h2>DIRECTIONS</h2>
-						<p>
-							Northbound from San Diego <br /> <br /> Take Interstate 5 North
-							to the Villa de La Valle exit #36. Turn right (east) onto Via de
-							La Valle, and proceed for 4 miles. After crossing La Gracia, turn
-							left on Via de Santa Fe following the signs to Rancho Santa Fe.
-							At the first stop sign, turn left onto Paseo Delicias and drive 2
-							blocks to a five way stop. Take a slight right onto Linea del
-							Cielo and proceed for one block. The Inn is located on the left
-							side of the road at 5951 Linea del Cielo. <br /> <br />
-							Southbound from LA, Riverside &amp; OC<br /> <br /> Take
-							Interstate 5 South to the Lomas Santa Fe exit #37. Turn left
-							(east) onto Lomas Santa Fe, and proceed 4.5 miles. The road name
-							will change to Linea Del Cielo. The Inn is located on the right
-							side of the road at 5951 Linea del Cielo. <br />
-						</p>
+					<div
+						style="width: 50%; height: 450px; float: right; margin-top: 30px">
+						<div style="width: 100%; height: 430px; float: left">
+							<ul style="height: 200px; overflow: auto; list-style-type: none">
+								<li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<!--end column-->
+
+					<div style="width: 50%; height: 450px; float: left">
+						<div id="chart2"></div>
 
 					</div>
-					<!--end column-->
+					<div style="width: 50%; height: 450px; float: right">
+						<div style="height: 430px; float: left">
+							<ul style="height: 200px; overflow: auto; list-style-type: none">
+								<li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								<li style="width: 70%; float: left">jjslkflkjljlj</li>
+								<li style="width: 20%; float: right">111</li>
+								</li>
+							</ul>
+						</div>
+						<div style="text-align: center; clear: both;">
+							<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+							<script src="/follow.js" type="text/javascript"></script>
+						</div>
+					</div>
+					<!--折线图开始-->
+					<script type="text/javascript">
+						var data1 = [ [ 3, 6, 8, 1, 11, 22, 4 ] ];
+						var data2 = [ [ -3, -6, -8, -1, -11, -22, -4 ] ];
+						var data_max1 = 30; //Y轴最大刻度
+						var data_max2 = 5;
+						var line_title = [ "" ]; //曲线名称
+						var y_label = ""; //Y轴标题
+						var x_label = ""; //X轴标题
+						var x = [ 11.13, 11.14, 11.15, 11.16, 11.17, 11.18,
+								11.19 ]; //定义X轴刻度值
+						var title = "这是标题"; //统计图标标题
+						j.jqplot.diagram.base("chart1", data1, line_title,
+								"正面新闻折线图", x, x_label, y_label, data_max1, 1);
+						j.jqplot.diagram.base("chart2", data2, line_title,
+								"负面新闻折线图", x, x_label, y_label, data_max2, 1);
+					</script>
+					<!--折线图结束-->
 
 					<div class="clearfix"></div>
 
-					<div class="column full">
-						<div class="hr-t"></div>
-						<div class="hr-b"></div>
-					</div>
 
 					<div class="column full">
 
-						<h2>VICINITY MAP</h2>
+						<h2>检索你想要的信息</h2>
 
 						<div id="gmap">
-							<iframe
-								src="https//maps.google.com/maps/ms?msid=205751736116737027595.0004d416d6aa1647722db&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=32.91418,-116.982422&amp;spn=0.806997,1.167297&amp;z=9&amp;output=embed"></iframe>
-							<br /> <small><a
-								href="https//maps.google.com/maps/ms?msid=205751736116737027595.0004d416d6aa1647722db&amp;msa=0&amp;ie=UTF8&amp;t=m&amp;ll=32.91418,-116.982422&amp;spn=0.806997,1.167297&amp;z=9&amp;output=embed"
+							<iframe src="https://www.baidu.com/"></iframe>
+							<br /> <small><a href="https://www.baidu.com/"
 								target="_blank">View larger map</a></small>
 						</div>
 					</div>
@@ -455,58 +521,17 @@
 					</div>
 
 					<div class="column full">
-						<h2>ABOUT RANCHO SANTA FE</h2>
-						<p>Choose to relax and soak up the California sunshine at the
-							resort's pool, or meander across the street to explore the
-							boutiques, jewelry stores, restaurants and antique shops at The
-							Village of Rancho Santa Fe (fondly referred to as "The Village"
-							by the residents). A friday morning tee time will be arranged for
-							those who are interested, at Rancho Santa Fe Golf Club- a
-							private, 18-hole championship golf course considered one of the
-							Top 20 Best Golf Courses in California.</p>
+						<h2></h2>
+						<p></p>
 					</div>
 					<!--end column-->
 
 					<div class="column full">
-						<h2>HISTORY OF THE INN</h2>
-						<p>Ninety years ago, construction began on La Morada
-							(â€œdwellingâ€?in Spanish), the first building in what would
-							become Rancho Santa Fe. Now known as The Inn at Rancho Santa Fe,
-							â€œThe Innâ€?to locals, it was then a guesthouse for prospective
-							land buyers, a place to â€œput them upâ€?while they looked at
-							lots owned by the Santa Fe Land Improvement Company. The company,
-							a subsidiary of the Santa Fe Railway, had bought up parcels,
-							planting eucalyptus trees for railroad spikes. But as history has
-							so often shown, not everything goes according to plan. The wood,
-							the company discovered, was too soft to hold the spikes. It was
-							on to plan B.</p>
-						<p>That plan turned out to be fortuitous. It led to the
-							master-planned community of Rancho Santa Fe, designed by Lilian
-							Rice, a National City-born architect and U.C. Berkeley graduate,
-							who would earn acclaim for her signature Spanish Colonial Revival
-							style. Rice designed the villageâ€™s key commercial and
-							residential buildings, many now considered so historically
-							significant that they are listed on the National Register of
-							Historic Places.</p>
-						<p>Throughout the decades The Inn has been a favorite
-							destination for many years of famous and influential people. In
-							1932, singer-actor Bing Crosby purchased one of Juan Osunaâ€™s
-							original adobes with 50 acres, and hired Lilian Rice as his
-							architect. Legendary architect Frank Lloyd Wright was married in
-							the parlor of the Inn in 1928.</p>
-						<p>
-							Just as the architecture of the missions tells a story about the
-							history of California, so does Lilian Riceâ€™s legendary design
-							of The Inn. It is a perfect representation of old California
-							charm and Rice's belief that true beauty lies in simplicity
-							rather than ornateness. The Inn is a perfect reflection of Rice's
-							dream - a place where time stands still amidst the simplistic,
-							natural beauty that is Rancho Santa Fe. &nbsp;&nbsp; Go <a
-								href="http//www.zjf88.com/" target="_blank">here</a> and <a
-								href="http//www.zjf88.com/" target="_blank">here</a> for more
-							information.
-
-						</p>
+						<h2></h2>
+						<p></p>
+						<p></p>
+						<p></p>
+						<p></p>
 					</div>
 					<!--end column-->
 
@@ -514,20 +539,12 @@
 
 				<section id="registry" class="clearfix">
 
-					<h1>Registry</h1>
+					<h1></h1>
 
 					<div class="column full">
 
-						<p>Due to the nature of city life (not a great deal of storage
-							space), we have decided to embrace the HONEYMOON REGISTRY site.
-							However, if your prefer the traditional route, we are registered
-							at Williams Sonoma, Sur La Table, &amp; Macy's. A link for the
-							registry sites will be coming soon!</p>
-						<p>
-							LOVE NOTES FOR SARAH &amp; BRADLEY <br /> Email us at <a
-								href="mailto:sarahhills85@gmail.com" class="email"
-								target="_blank">sarahhills85@gmail.com</a> <br />
-						</p>
+						<p></p>
+						<p></p>
 
 					</div>
 					<!--end column-->

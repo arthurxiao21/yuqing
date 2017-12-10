@@ -9,14 +9,14 @@
 */
 
 /* BASIC RESET */
-ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,macbook,p,blockquote,fieldset,input{margin:0; padding:0;}
+/* ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,macbook,p,blockquote,fieldset,input{margin:0; padding:0;} */
 
 /* HTML ELEMENTS */
-body { background: -moz-radial-gradient(#364D58,#000); background: -webkit-gradient(radial, center center,10,center center,1000, from(#364D58), to(#000)); color:#555; background-color:#151f23; }
+/* body { background: -moz-radial-gradient(#364D58,#000); background: -webkit-gradient(radial, center center,10,center center,1000, from(#364D58), to(#000)); color:#555; background-color:#151f23; }
 h1 { font: bold 50px Helvetica, Arial, Sans-serif; text-align: center; color: #eee; text-shadow: 0px 2px 6px #333; }
 h1 small{ font-size: 20px; text-transform:uppercase; letter-spacing: 14px; display: block; color: #ccc; margin-top:10px; }
 h2 a { display: block; text-decoration: none; margin: 0 0 30px 0; font: italic 40px Georgia, Times, Serif;  text-align: center; color: #bfe1f1; text-shadow: 0px 2px 6px #333; }
-h2 a:hover { color: #90bcd0; }
+h2 a:hover { color: #90bcd0; } */
 
 /* COMMON CLASSES */
 .break { clear:both; }
@@ -75,7 +75,7 @@ h2 a:hover { color: #90bcd0; }
 #macbook div.top { z-index:97; }
 #macbook div.bottom { z-index:96; height:200px; }
 #macbook:hover div.top { z-index:997; background-color:#bc003c; margin-left:210px; }
-#macbook:hover div.bottom { z-index:996; background-color:#9d0032; width:250px;
+#macbook:hover div.bottom { z-index:996; background-color:#9d0032; width:580px;
 	background:-moz-linear-gradient(-90deg, #9d0032, #7a0027); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#9d0032), to(#7a0027)); }
 
 /* iPod bar */
