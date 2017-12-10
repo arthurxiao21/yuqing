@@ -10,7 +10,7 @@ public class News {
 		return title;
 	}
 	public void setTitle(String title) {
-		this.title =  title;
+		this.title = title;
 	}
 	public Integer getNum() {
 		return num;
