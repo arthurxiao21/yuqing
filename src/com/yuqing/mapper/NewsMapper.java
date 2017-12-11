@@ -6,6 +6,6 @@ import com.yuqing.pojo.News;
 
 public interface NewsMapper {
 
-	public List<News> findNews();
+	public List<News>  findNews();
 
 }
