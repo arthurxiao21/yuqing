@@ -40,7 +40,7 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 
 		<!-- 扫描的路径，如果需要扫描多个，中间使用半角逗号隔开 -->
-		<property name="basePackage" value="com.yuqing.mapper" />
+		<property name="basePackage" value="com.czy.mapper" />
 
 		<!-- 此地方不能用ref方式指定，因其拥有最高优先级，会导致数据库连接池读取出错 -->
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />

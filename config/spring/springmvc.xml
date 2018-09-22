@@ -15,7 +15,7 @@
 
 	<!-- 在实际开发中使用组件扫描 -->
 	<!-- 可以扫描controller，service。。。 这里可以扫描controller，指定controller的包即可 -->
-	<context:component-scan base-package="com.yuqing.controller"></context:component-scan>
+	<context:component-scan base-package="com.czy.controller"></context:component-scan>
 
 
 

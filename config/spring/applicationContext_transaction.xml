@@ -38,7 +38,7 @@
 </tx:advice>
 <!-- 配置aop切面编程 -->
 <aop:config>
-<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.yuqing.serviceImpl.*.*(..))"/>
+<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.czy.serviceImpl.*.*(..))"/>
 </aop:config>
 
 </beans>

@@ -14,7 +14,10 @@ select,
 textarea {
     color: #222;
 }
-
+:root {
+  --main-bg-color: calc( 450 * 1px );
+  --MAIN-BG-COLOR: RED;
+}
 body {
     font-size: 1em;
     line-height: 1.4;
@@ -884,3 +887,18 @@ a.email {
 	width: 15%;
 	float: right;
 }
+#char_div{
+	width: 100%;
+	height: 500px;
+}
+
+/* #Chart_line_div{
+	width: 50%;
+	height: 450px;
+	float: left;
+} */
+/* #canvas1{
+	width: 400px;
+	height: 430px;
+}  */
+

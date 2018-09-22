@@ -12,7 +12,9 @@
 		http://www.springframework.org/schema/aop/spring-aop-4.1.xsd 
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx-4.1.xsd ">
-<!-- 使用配置方式，在Spring容器中配置Service -->
+	<!-- 使用配置方式，在Spring容器中配置Service -->
 
-<bean id="newsService" class="com.yuqing.serviceImpl.NewsServiceImpl"></bean>
+	<bean id="newsService" class="com.czy.serviceImpl.NewsServiceImpl"></bean>
+	<bean id="storeService" class="com.czy.serviceImpl.StoreServiceImpl"></bean>
+	<bean id="userService" class="com.czy.serviceImpl.UserServiceImpl"></bean>
 </beans>

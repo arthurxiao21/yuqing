@@ -12,9 +12,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title>大数据舆情分析系统</title>
-<meta name="description"
-	content="Welcome to the wedding website for Sarah and Brad's Big Day!">
+<title>舆情分析</title>
+<meta name="description" content="Welcome to the sentiment analysi">
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
@@ -37,66 +36,7 @@
 <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="js/vendor/jQuery.js"></script>
 <script type="text/javascript" src="js/vendor/jqplot.js"></script>
-
-
-<!-- 不规则新闻CSS -->
-<style type="text/css">
-.DisOrder_news1 {
-	transform: rotate(2deg);
-	-moz-transform: rotate(2deg);
-	/* Firefox 旋转属性，参数表示角度(deg表示角度)，负数逆时针，正数顺时针 */
-	-webkit-transform: rotate(2deg); /* Safari和Chrome */
-	-ms-transform: rotate(2deg); /* IE 9 */
-	-o-transform: rotate(2deg); /* Opera */
-}
-
-.DisOrder_news2, .DisOrder_news3 {
-	transform: rotate(5deg);
-	-moz-transform: rotate(5deg);
-	/* Firefox 旋转属性，参数表示角度(deg表示角度)，负数逆时针，正数顺时针 */
-	-webkit-transform: rotate(5deg); /* Safari和Chrome */
-	-ms-transform: rotate(5deg); /* IE 9 */
-	-o-transform: rotate(5deg); /* Opera */
-}
-
-.DisOrder_news4 {
-	transform: rotate(-2deg);
-	-moz-transform: rotate(-2deg);
-	/* Firefox 旋转属性，参数表示角度(deg表示角度)，负数逆时针，正数顺时针 */
-	-webkit-transform: rotate(-2deg); /* Safari和Chrome */
-	-ms-transform: rotate(-2deg); /* IE 9 */
-	-o-transform: rotate(-2deg); /* Opera */
-}
-
-.DisOrder_news7 {
-	transform: rotate(2deg);
-	-moz-transform: rotate(2deg);
-	/* Firefox 旋转属性，参数表示角度(deg表示角度)，负数逆时针，正数顺时针 */
-	-webkit-transform: rotate(2deg); /* Safari和Chrome */
-	-ms-transform: rotate(2deg); /* IE 9 */
-	-o-transform: rotate(2deg); /* Opera */
-}
-
-.DisOrder_news8 {
-	transform: rotate(3deg);
-	-moz-transform: rotate(3deg);
-	/* Firefox 旋转属性，参数表示角度(deg表示角度)，负数逆时针，正数顺时针 */
-	-webkit-transform: rotate(3deg); /* Safari和Chrome */
-	-ms-transform: rotate(3deg); /* IE 9 */
-	-o-transform: rotate(3deg); /* Opera */
-}
-
-.DisOrder_news9 {
-	transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	/* Firefox 旋转属性，参数表示角度(deg表示角度)，负数逆时针，正数顺时针 */
-	-webkit-transform: rotate(-3deg); /* Safari和Chrome */
-	-ms-transform: rotate(-3deg); /* IE 9 */
-	-o-transform: rotate(-3deg); /* Opera */
-}
-</style>
-
-
+<script type="text/javascript" src="js/Chart.min.js"></script>
 
 </head>
 <body>
@@ -118,11 +58,11 @@
 			<div id="heading" class="wrapper clearfix">
 				<nav id="nav">
 					<ul>
-						<li><a href="#brideandgroom">今日新闻</a></li>
-						<li><a href="#wedding">今日热度</a></li>
-						<li><a href="#accomodations">今日舆情</a></li>
-						<li><a href="#registry">REGISTRY</a></li>
-						<li><a href="http//www.zjf88.com" target="_blank">BLOG</a></li>
+						<li><a href="#xinwen">新闻</a></li>
+						<li><a href="#redu">热度</a></li>
+						<li><a href="#yuqing">舆情</a></li>
+						<li><a href="#guanyu">关于</a></li>
+						<!-- <li><a href="http//www.zjf88.com" target="_blank">BLOG</a></li> -->
 					</ul>
 
 				</nav>
@@ -175,10 +115,10 @@
 
 				<div class="clearfix"></div>
 
-				<section id="brideandgroom" class="clearfix">
+				<section id="xinwen" class="clearfix">
 					<span class="head-sarah"
 						style="filter: shadow(color = #9370db); width: 100%; color: #ffebcd; line-height: 150%; font-family: 隶书"><font
-						size=150px>今日新闻</font></span>
+						size=150px>新闻</font></span>
 					<!-- 整齐的 样式-->
 					<div class="column left">
 						<font size="+1">
@@ -192,17 +132,6 @@
 					</div>
 					<!--end column-->
 
-					<!-- 杂乱的 样式-->
-					<!-- <div class="column right">
-						<font size="+1">
-							<ul>
-								新闻
-							</ul>
-						</font>
-
-					</div> -->
-					<!--end column-->
-
 					<div class="clearfix"></div>
 
 					<div class="column full">
@@ -214,27 +143,27 @@
 
 				</section>
 
-				<script>
-				<!--left p-->
+				<!-- <script>
+			
 					(function() {
 						window.onload = function() {
 
 							//数据源  
 							var dict = [ {
 								x : "2015-04-24",
-								y : 13400
+								y : 10000
 							}, {
 								x : "2015-04-25",
-								y : 13380
+								y : 10000
 							}, {
 								x : "2015-04-26",
-								y : 13370
+								y : 10000
 							}, {
 								x : "2015-04-27",
-								y : 13370
+								y : 10000
 							}, {
 								x : "2015-04-28",
-								y : 13380
+								y : 10000
 							} ]
 
 							//数据源提取  
@@ -291,13 +220,88 @@
 
 						}
 					})();
-				</script>
+				</script> -->
 
-				<section id="wedding" class="clearfix">
+				<section id="redu" class="clearfix">
 
-					<font size="30px">今日热度</font>
+					<font size="30px">热度</font>
 
 					<div style="width: 100%; float: left">
+						<div id="char_div">
+							<canvas id="myChart" style="width: 600px; height: 420px"></canvas>
+						</div>
+
+						<script>
+							var ctx = document.getElementById("myChart");
+							var myChart = new Chart(ctx, {
+								type : 'horizontalBar',
+								data : {
+
+									labels : [ "${highList.get(0).date}",
+											"${highList.get(1).date}",
+											"${highList.get(2).date}",
+											"${highList.get(3).date}",
+											"${highList.get(4).date}",
+											"${highList.get(5).date}",
+											"${highList.get(6).date}" ],
+									datasets : [ {
+										label : '热度',
+										data : [ '${highList.get(0).num}',
+												'${highList.get(1).num}',
+												'${highList.get(2).num}',
+												'${highList.get(3).num}',
+												'${highList.get(4).num}',
+												'${highList.get(5).num}',
+												'${highList.get(6).num}' ],
+										backgroundColor : [
+												'rgba(255, 99, 132, 0.2)',
+												'rgba(54, 162, 235, 0.2)',
+												'rgba(255, 206, 86, 0.2)',
+												'rgba(75, 192, 192, 0.2)',
+												'rgba(153, 102, 255, 0.2)',
+												'rgba(255, 159, 64, 0.2)',
+												'rgba(75, 192, 192, 0.2)'
+
+										],
+										borderColor : [ 'rgba(255,99,132,1)',
+												'rgba(54, 162, 235, 1)',
+												'rgba(255, 206, 86, 1)',
+												'rgba(75, 192, 192, 1)',
+												'rgba(153, 102, 255, 1)',
+												'rgba(255, 159, 64, 1)',
+												'rgba(75, 192, 192, 0.2)'
+
+										],
+										borderWidth : 1
+									} ]
+								},
+								scaleGridLineWidth : 2,
+								options : {
+									scales : {
+										yAxes : [ {
+											ticks : {
+												beginAtZero : true,
+												fontColor : "#CCC",
+												fontSize : 20
+											}
+										} ],
+										xAxes : [ {
+											ticks : {
+												beginAtZero : true,
+												fontColor : "#CCC",
+												fontSize : 20
+											}
+										} ]
+									}
+								}
+
+							});
+						</script>
+
+
+
+					</div>
+					<!--  <div style="width: 100%; float: left">
 						<div id="wrapper">
 							<div style="text-align: center; clear: both;">
 								<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
@@ -308,40 +312,56 @@
 									<li id="iphone">
 										<div class="bottom">
 											<div class="infobox">
-												<font size=20px>11.25</font>
-												<p>234</p>
+												<font size=20px>${highList.get(0).date}</font>
+												<p>${highList.get(0).width}</p>
 											</div>
 										</div>
 									</li>
 									<li id="macbook">
 										<div class="bottom">
 											<div class="infobox">
-												<font size=20px>11.24</font>
-												<p>214</p>
+												<font size=20px>${highList.get(1).date}</font>
+												<p>${highList.get(1).num}</p>
 											</div>
 										</div>
 									</li>
 									<li id="ipod">
 										<div class="bottom">
 											<div class="infobox">
-												<font size=20px>11.23</font>
-												<p>423</p>
+												<font size=20px>${highList.get(2).date}</font>
+												<p>${highList.get(2).num}</p>
 											</div>
 										</div>
 									</li>
 									<li id="cinema">
 										<div class="bottom">
 											<div class="infobox">
-												<font size=20px>11.22</font>
-												<p>132</p>
+												<font size=20px>${highList.get(3).date}</font>
+												<p>${highList.get(3).date}</p>
 											</div>
 										</div>
 									</li>
 									<li id="macmini">
 										<div class="bottom">
 											<div class="infobox">
-												<font size=20px>11.21</font>
-												<p>432</p>
+												<font size=20px>${highList.get(4).date}</font>
+												<p>${highList.get(4).num}</p>
+											</div>
+										</div>
+									</li>
+									<li id="iphone2">
+										<div class="bottom">
+											<div class="infobox">
+												<font size=20px>${highList.get(5).date}</font>
+												<p>${highList.get(5).num}</p>
+											</div>
+										</div>
+									</li>
+									<li id="iphone3">
+										<div class="bottom">
+											<div class="infobox">
+												<font size=20px>${highList.get(6).date}</font>
+												<p>${highList.get(6).num}</p>
 											</div>
 										</div>
 									</li>
@@ -351,26 +371,27 @@
 
 
 
-					</div>
+					</div>-->
 					<!--end column-->
 
 					<div class="column left bp">
 
 
-						<div style="width: 70%; float: left; margin-left: 20px">
+						<div
+							style="width: 70%; float: left; margin-left: 20px; margin-top: 200px">
 							<font size="+1">
 								<ul>
-									<c:forEach var="news" items="${newsList}">
-										<li><a href="${news.URL } " target="blank">${news.title }</a></li>
+									<c:forEach var="allnews" items="${newsNumList}">
+										<li><a href="${allnews.URL } " target="blank">${allnews.title }</a></li>
 									</c:forEach>
 								</ul>
 							</font>
 						</div>
-						<div style="width: 20%; float: right">
+						<div style="width: 20%; float: right; margin-top: 200px">
 							<font size="+1">
 								<ul>
-									<c:forEach var="news" items="${newsList}">
-										<li>${news.num }</li>
+									<c:forEach var="allnews" items="${newsNumList}">
+										<li>${allnews.num }</li>
 									</c:forEach>
 								</ul>
 							</font>
@@ -382,51 +403,87 @@
 					<!--end column-->
 				</section>
 
-				<section id="accomodations" class="clearfix">
+				<section id="yuqing" class="clearfix">
 
-					<font size="30px">今日舆情</font>
+					<font size="30px">舆情</font>
 					<div style="height: 50px"></div>
-					<div style="width: 50%; height: 450px; float: left;">
+					<!-- <div style="width: 60%; height: 450px; float: left;">
 						<div id="chart1"></div>
+					</div> -->
+
+					<div style="width: 60%; height: 500px; float: left;">
+						<canvas id="canvas1" height="300" width="400"></canvas>
 					</div>
+					<script>
+						var ctx = document.getElementById("canvas1");
+						var myChart = new Chart(
+								ctx,
+								{
+									type : 'line',
+									data : {
+
+										labels : [
+												"${upHighList.get(0).getDate()}",
+												"${upHighList.get(1).getDate()}",
+												"${upHighList.get(2).getDate()}",
+												"${upHighList.get(3).getDate()}",
+												"${upHighList.get(4).getDate()}",
+												"${upHighList.get(5).getDate()}",
+												"${upHighList.get(6).getDate()}" ],
+										datasets : [ {
+											label : '正面',
+											data : [
+													"${upHighList.get(0).getScore()}",
+													"${upHighList.get(1).getScore()}",
+													"${upHighList.get(2).getScore()}",
+													"${upHighList.get(3).getScore()}",
+													"${upHighList.get(4).getScore()}",
+													"${upHighList.get(5).getScore()}",
+													"${upHighList.get(6).getScore()}" ],
+											backgroundColor : [
+													'rgba(127, 255, 0, 0.2)', ],
+											borderColor : [
+													'rgba(255,99,132,1)', ],
+											borderWidth : 1
+										} ]
+									},
+									scaleGridLineWidth : 2,
+									options : {
+										scales : {
+											yAxes : [ {
+												ticks : {
+													beginAtZero : true,
+													fontColor : "#CCC",
+													fontSize : 12
+												}
+											} ],
+											xAxes : [ {
+												ticks : {
+													beginAtZero : true,
+													fontColor : "#CCC",
+													fontSize : 12
+												}
+											} ]
+										}
+									}
+
+								});
+					</script>
+
 					<!--end column-->
 
 					<div
-						style="width: 50%; height: 450px; float: right; margin-top: 30px">
+						style="width: 40%; height: 500px; float: right; margin-top: 30px">
 						<div style="width: 100%; height: 430px; float: left">
-							<ul style="height: 200px; overflow: auto; list-style-type: none">
-								<li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								</li>
+							<ul style="height: 350px; overflow: auto; list-style-type: none">
+								<c:forEach begin="0" end="${upHighList.size()-1 }" var="allnews"
+									items="${upHighList}">
+
+									<li style="width: 70%; float: left"><a
+										href="${allnews.URL } " target="blank">${allnews.title }</a></li>
+									<li style="width: 20%; float: right">${allnews.score }</li>
+
+								</c:forEach>
 							</ul>
 						</div>
 					</div>
@@ -434,45 +491,77 @@
 
 					<!--end column-->
 
-					<div style="width: 50%; height: 450px; float: left">
+					<!-- <div style="width: 60%; height: 450px; float: left">
 						<div id="chart2"></div>
 
+					</div> -->
+					<div style="width: 60%; height: 500px; float: left;">
+						<canvas id="canvas2" height="300" width="400"></canvas>
 					</div>
-					<div style="width: 50%; height: 450px; float: right">
+
+					<script>
+						var ctx = document.getElementById("canvas2");
+						var myChart = new Chart(ctx, {
+							type : 'line',
+							data : {
+
+								labels : [ "${upHighList.get(0).date}",
+										"${upHighList.get(1).date}",
+										"${upHighList.get(2).date}",
+										"${upHighList.get(3).date}",
+										"${upHighList.get(4).date}",
+										"${upHighList.get(5).date}",
+										"${upHighList.get(6).date}" ],
+								datasets : [ {
+									label : '负面',
+									data : [ "${downHighList.get(0).score}",
+											"${downHighList.get(1).score}",
+											"${downHighList.get(2).score}",
+											"${downHighList.get(3).score}",
+											"${downHighList.get(4).score}",
+											"${downHighList.get(5).score}",
+											"${downHighList.get(6).score}" ],
+									backgroundColor : [
+											'rgba(255, 215, 0, 0.2)', ],
+									borderColor : [ 'rgba(255,99,132,1)', ],
+									borderWidth : 1
+								} ]
+							},
+							scaleGridLineWidth : 2,
+							options : {
+								scales : {
+									yAxes : [ {
+										ticks : {
+											beginAtZero : true,
+											fontColor : "#CCC",
+											fontSize : 12
+										}
+									} ],
+									xAxes : [ {
+										ticks : {
+											beginAtZero : true,
+											fontColor : "#CCC",
+											fontSize : 12
+										}
+									} ]
+								}
+							}
+
+						});
+					</script>
+
+
+					<div style="width: 40%; height: 500px; float: right">
 						<div style="height: 430px; float: left">
-							<ul style="height: 200px; overflow: auto; list-style-type: none">
-								<li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								<li style="width: 70%; float: left">jjslkflkjljlj</li>
-								<li style="width: 20%; float: right">111</li>
-								</li>
+							<ul style="height: 350px; overflow: auto; list-style-type: none">
+								<c:forEach begin="0" end="${upHighList.size()-1 }" var="allnews"
+									items="${downHighList}">
+									<li>
+									<li style="width: 70%; float: left"><a
+										href="${allnews.URL } " target="blank">${allnews.title }</a></li>
+									<li style="width: 20%; float: right">${allnews.score }</li>
+									</li>
+								</c:forEach>
 							</ul>
 						</div>
 						<div style="text-align: center; clear: both;">
@@ -480,37 +569,19 @@
 							<script src="/follow.js" type="text/javascript"></script>
 						</div>
 					</div>
-					<!--折线图开始-->
-					<script type="text/javascript">
-						var data1 = [ [ 3, 6, 8, 1, 11, 22, 4 ] ];
-						var data2 = [ [ -3, -6, -8, -1, -11, -22, -4 ] ];
-						var data_max1 = 30; //Y轴最大刻度
-						var data_max2 = 5;
-						var line_title = [ "" ]; //曲线名称
-						var y_label = ""; //Y轴标题
-						var x_label = ""; //X轴标题
-						var x = [ 11.13, 11.14, 11.15, 11.16, 11.17, 11.18,
-								11.19 ]; //定义X轴刻度值
-						var title = "这是标题"; //统计图标标题
-						j.jqplot.diagram.base("chart1", data1, line_title,
-								"正面新闻折线图", x, x_label, y_label, data_max1, 1);
-						j.jqplot.diagram.base("chart2", data2, line_title,
-								"负面新闻折线图", x, x_label, y_label, data_max2, 1);
-					</script>
-					<!--折线图结束-->
 
 					<div class="clearfix"></div>
 
 
 					<div class="column full">
 
-						<h2>检索你想要的信息</h2>
+						<!-- <h2>检索你想要的信息</h2>
 
 						<div id="gmap">
 							<iframe src="https://www.baidu.com/"></iframe>
 							<br /> <small><a href="https://www.baidu.com/"
 								target="_blank">View larger map</a></small>
-						</div>
+						</div> -->
 					</div>
 
 					<div class="clearfix"></div>
@@ -535,20 +606,18 @@
 					</div>
 					<!--end column-->
 
+
 				</section>
 
-				<section id="registry" class="clearfix">
-
-					<h1></h1>
+				<section id="guanyu" class="clearfix">
+					<h1>About</h1>
 
 					<div class="column full">
 
-						<p></p>
-						<p></p>
+						<p>联系我们</p>
 
 					</div>
 					<!--end column-->
-
 				</section>
 
 				<div style="height: 300px"></div>

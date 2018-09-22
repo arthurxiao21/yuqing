@@ -64,11 +64,16 @@ h2 a:hover { color: #90bcd0; } */
 #bar li:hover div.bottom div.infobox { color:#eee; text-shadow: 0px 5px 5px #111; }
 #bar li:hover div.bottom div.infobox p { opacity:1; }
 
+
+:root {
+  --main-bg-color: calc( ${highList.get(0).width} * 1px );
+  --MAIN-BG-COLOR: RED;
+}
 /* iPhone bar */
 #iphone div.top { z-index:99; }
 #iphone div.bottom { z-index:98; height:150px; }
 #iphone:hover div.top { z-index:999; background-color:#1f81ac; margin-left:160px; }
-#iphone:hover div.bottom { z-index:998; background-color:#1a6c90; width:200px;
+#iphone:hover div.bottom { z-index:998; background-color:#1a6c90; width: calc( ${highList.get(0).width} * 1px );
 	background:-moz-linear-gradient(-90deg, #1a6c90, #14506b); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#1a6c90), to(#14506b)); }
 
 /* MacBook bar */
@@ -98,6 +103,20 @@ h2 a:hover { color: #90bcd0; } */
 #macmini:hover div.top { z-index:991; background-color:#3f1150; margin-left:130px; }
 #macmini:hover div.bottom { z-index:990; background-color:#340e43; width:170px;
 	background:-moz-linear-gradient(-90deg, #340e43, #1a0721); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#340e43), to(#1a0721)); }
+
+/* iPhone2 bar */
+#iphone2 div.top { z-index:89; }
+#iphone2 div.bottom { z-index:88; height:150px; }
+#iphone2:hover div.top { z-index:989; background-color:#1f81ac; margin-left:160px; }
+#iphone2:hover div.bottom { z-index:988; background-color:#1a6c90; width:200px;
+	background:-moz-linear-gradient(-90deg, #1a6c90, #14506b); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#1a6c90), to(#14506b)); }
+
+/* iPhone3 bar */
+#iphone3 div.top { z-index:87; }
+#iphone3 div.bottom { z-index:86; height:150px; }
+#iphone3:hover div.top { z-index:987; background-color:#1f81ac; margin-left:160px; }
+#iphone3:hover div.bottom { z-index:986; background-color:#1a6c90; width:200px;
+	background:-moz-linear-gradient(-90deg, #1a6c90, #14506b); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#1a6c90), to(#14506b)); }
 
 #apple { clear:both; margin-top:-70px; position:relative; z-index:-999; }
 #apple p { float:right; padding-top:247px; }

@@ -1,4 +1,4 @@
-package com.yuqing.pojo;
+package com.czy.pojo;
 
 public class News {
 
